@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OIZA Asbestos Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        main {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .status-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .status-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .feature-list li.pending:before {
+            content: "○ ";
+            color: #999;
+        }
+        
+        .feature-list li.pending {
+            color: #999;
+        }
+        
+        .deployment-steps {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        
+        .deployment-steps ol {
+            margin-left: 20px;
+        }
+        
+        .deployment-steps li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .domain-box {
+            background: #f0f4ff;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .domain-box p {
+            margin: 8px 0;
+            font-family: 'Courier New', monospace;
+            background: white;
+            padding: 10px;
+            border-radius: 3px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .domain-box strong {
+            display: inline-block;
+            width: 180px;
+            color: #667eea;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            padding: 30px 40px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .architecture-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .architecture-box {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .architecture-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .architecture-box p {
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .architecture-section {
+                grid-template-columns: 1fr;
+            }
+            
+            main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 OIZA Asbestos Academy</h1>
+            <p>Professional Learning Management System</p>
+        </header>
+        
+        <main>
+            <!-- Status Section -->
+            <section class="section">
+                <h2>Portal Status</h2>
+                <div class="status-box">
+                    <h3>✅ System Ready for Deployment</h3>
+                    <p>Your GitHub Pages frontend is configured and ready for deployment. The portal is hosted at:</p>
+                    <div class="domain-box">
+                        <p><strong>Frontend Domain:</strong> www.oiza-asbestos-academy.oizaholdings.co.za</p>
+                        <p><strong>Repository:</strong> cconceptleader/-www.oiza-asbestos-academy.oizaholdings.co.za-</p>
+                        <p><strong>Backend API:</strong> api.oiza-asbestos-academy.oizaholdings.co.za</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Architecture Section -->
+            <section class="section">
+                <h2>System Architecture</h2>
+                <div class="architecture-section">
+                    <div class="architecture-box">
+                        <h3>🌐 Frontend</h3>
+                        <p><strong>Hosting:</strong> GitHub Pages</p>
+                        <p><strong>Technology:</strong> HTML, CSS, JavaScript</p>
+                        <p><strong>Domain:</strong> www.oiza-asbestos-academy.oizaholdings.co.za</p>
+                        <p><strong>CNAME Target:</strong> cconceptleader.github.io</p>
+                    </div>
+                    <div class="architecture-box">
+                        <h3>⚙️ Backend</h3>
+                        <p><strong>Hosting:</strong> Separate PHP server</p>
+                        <p><strong>Technology:</strong> PHP + MySQL</p>
+                        <p><strong>Domain:</strong> api.oiza-asbestos-academy.oizaholdings.co.za</p>
+                        <p><strong>Features:</strong> Auth, Users, Assessments</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Deployment Steps -->
+            <section class="section">
+                <h2>Deployment Steps</h2>
+                <div class="deployment-steps">
+                    <ol>
+                        <li><strong>Configure GitHub Pages:</strong> Enable custom domain in repository settings</li>
+                        <li><strong>DNS Configuration:</strong> Create CNAME record pointing to cconceptleader.github.io</li>
+                        <li><strong>Wait for DNS:</strong> Allow time for DNS propagation</li>
+                        <li><strong>Enable HTTPS:</strong> Activate HTTPS enforcement after DNS verification</li>
+                        <li><strong>Deploy Backend:</strong> Set up PHP and MySQL on separate hosting</li>
+                        <li><strong>Test Integration:</strong> Verify frontend-backend communication</li>
+                    </ol>
+                </div>
+                <a href="DEPLOYMENT_INSTRUCTIONS.md" class="button">📋 View Full Instructions</a>
+            </section>
+            
+            <!-- Features Section -->
+            <section class="section">
+                <h2>Available Features</h2>
+                <ul class="feature-list">
+                    <li>Frontend Portal Template</li>
+                    <li>GitHub Pages Configuration</li>
+                    <li>Custom Domain Setup (CNAME)</li>
+                    <li>HTTPS Security</li>
+                    <li class="pending">User Authentication System</li>
+                    <li class="pending">Learner Registration</li>
+                    <li class="pending">Assessment Management</li>
+                    <li class="pending">Certificate Generation</li>
+                </ul>
+            </section>
+            
+            <!-- Next Steps -->
+            <section class="section">
+                <h2>Next Steps</h2>
+                <div class="status-box">
+                    <h3>Production Ready</h3>
+                    <p>Once this deployment is live, we can upgrade to include:</p>
+                    <ul style="margin-left: 20px; margin-top: 15px;">
+                        <li>Advanced user authentication</li>
+                        <li>Learner registration portal</li>
+                        <li>Assessment management</li>
+                        <li>PDF certificate generation</li>
+                        <li>Analytics and reporting</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Support Section -->
+            <section class="section">
+                <h2>Documentation</h2>
+                <p>For detailed information, see:</p>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li><a href="README.md">README - Project Overview</a></li>
+                    <li><a href="DEPLOYMENT_INSTRUCTIONS.md">Deployment Instructions - Complete Setup Guide</a></li>
+                    <li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages Documentation</a></li>
+                    <li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages" target="_blank">Custom Domain Troubleshooting</a></li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p><strong>OIZA Asbestos Academy</strong></p>
+            <p>Repository: cconceptleader/-www.oiza-asbestos-academy.oizaholdings.co.za-</p>
+            <p>Status: ✅ Deployment-Ready | Version: 1.0.0 | Updated: 2026-05-22</p>
+        </footer>
+    </div>
+</body>
+</html>
