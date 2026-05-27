@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrol Now | OIZA-ASBESTOS Academy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">
+          <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 3 L57 17.5 L57 46.5 L32 61 L7 46.5 L7 17.5 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"></path>
+            <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="20" y1="24" x2="44" y2="24"></line>
+              <line x1="16" y1="32" x2="48" y2="32"></line>
+              <line x1="20" y1="40" x2="44" y2="40"></line>
+            </g>
+            <circle cx="32" cy="50" r="2.5" fill="hsl(35 92% 50%)"></circle>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">OIZA-ASBESTOS</div>
+          <div class="brand-subtitle">Abatement Academy</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Overview</a>
+        <a href="modules.html">Modules</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="active" href="enrol.html">Enrol</a>
+        <a href="verify.html">Verify</a>
+        <a href="facilitator.html">Facilitator</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <a class="btn btn-primary" href="enrol.html">Start training</a>
+    </div>
+  </header>
+  
+  <main>
+    <section style="padding: 60px 20px;">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto;">
+          <h1 style="text-align: center; margin-bottom: 30px;">Enrol in a Programme</h1>
+          <p style="text-align: center; color: #666; margin-bottom: 40px;">Complete the form below. Enrolment takes under 2 minutes.</p>
+
+          <form style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onsubmit="handleEnrolment(event)">
+            <div class="form-group">
+              <label for="firstname" style="display: block; margin-bottom: 8px; font-weight: 500;">First Name *</label>
+              <input type="text" id="firstname" name="firstname" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <div class="form-group">
+              <label for="lastname" style="display: block; margin-bottom: 8px; font-weight: 500;">Last Name *</label>
+              <input type="text" id="lastname" name="lastname" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <div class="form-group">
+              <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Email Address *</label>
+              <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <div class="form-group">
+              <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 500;">Phone Number</label>
+              <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <div class="form-group">
+              <label for="idnumber" style="display: block; margin-bottom: 8px; font-weight: 500;">ID Number</label>
+              <input type="text" id="idnumber" name="idnumber" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <div class="form-group">
+              <label for="programme" style="display: block; margin-bottom: 8px; font-weight: 500;">Select Programme *</label>
+              <select id="programme" name="programme" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                <option value="">-- Select a programme --</option>
+                <option value="1">Programme 1: Awareness Induction</option>
+                <option value="2">Programme 2: Non-Asbestos Maintenance Awareness</option>
+                <option value="3">Programme 3: Type 1 Asbestos Work Training</option>
+                <option value="4">Programme 4: Annual Refresher</option>
+                <option value="5">Programme 5: Supervisor and Responsible Person Briefing</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label style="display: flex; align-items: center; gap: 10px; font-weight: 500;">
+                <input type="checkbox" name="agree" required>
+                I agree to the terms and conditions *
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Complete Enrolment</button>
+          </form>
+
+          <div style="margin-top: 40px; padding: 20px; background: #f0f4ff; border-radius: 8px; border-left: 4px solid #667eea;">
+            <h4 style="margin-top: 0;">What happens next?</h4>
+            <ol style="color: #666; line-height: 1.8;">
+              <li>You'll receive a confirmation email with your login credentials</li>
+              <li>Log in to access your chosen programme</li>
+              <li>Complete the modules at your own pace</li>
+              <li>Take the assessment (18 randomised questions)</li>
+              <li>If you score 80% or higher, you'll receive a certificate</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function handleEnrolment(event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const data = {
+        first_name: formData.get('firstname'),
+        last_name: formData.get('lastname'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        id_number: formData.get('idnumber'),
+        programme_id: formData.get('programme')
+      };
+      
+      // TODO: Send to backend API
+      console.log('Enrolment data:', data);
+      alert('Enrolment submitted! You will receive a confirmation email shortly.');
+    }
+  </script>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <div class="brand-mark">
+            <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 3 L57 17.5 L57 46.5 L32 61 L7 46.5 L7 17.5 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"></path>
+              <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="20" y1="24" x2="44" y2="24"></line>
+                <line x1="16" y1="32" x2="48" y2="32"></line>
+                <line x1="20" y1="40" x2="44" y2="40"></line>
+              </g>
+              <circle cx="32" cy="50" r="2.5" fill="hsl(35 92% 50%)"></circle>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <div class="brand-title">OIZA-ASBESTOS</div>
+            <div class="brand-subtitle">Abatement Academy</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Facility</div>
+        <ul class="footer-links">
+          <li><a href="modules.html">12-Module Curriculum</a></li>
+          <li><a href="pricing.html">Course Fees</a></li>
+          <li><a href="enrol.html">Enrol a Learner</a></li>
+          <li><a href="verify.html">Verify Certificate</a></li>
+          <li><a href="facilitator.html">Facilitator Console</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 OIZA Holdings</span>
+        <span>OIZA-ASBESTOS Abatement Academy</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

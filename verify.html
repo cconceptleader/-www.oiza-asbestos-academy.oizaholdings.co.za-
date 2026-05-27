@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Certificate | OIZA-ASBESTOS Academy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">
+          <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 3 L57 17.5 L57 46.5 L32 61 L7 46.5 L7 17.5 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"></path>
+            <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="20" y1="24" x2="44" y2="24"></line>
+              <line x1="16" y1="32" x2="48" y2="32"></line>
+              <line x1="20" y1="40" x2="44" y2="40"></line>
+            </g>
+            <circle cx="32" cy="50" r="2.5" fill="hsl(35 92% 50%)"></circle>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">OIZA-ASBESTOS</div>
+          <div class="brand-subtitle">Abatement Academy</div>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Overview</a>
+        <a href="modules.html">Modules</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="enrol.html">Enrol</a>
+        <a class="active" href="verify.html">Verify</a>
+        <a href="facilitator.html">Facilitator</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section style="padding: 60px 20px;">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto;">
+          <h1 style="text-align: center; margin-bottom: 30px;">Verify Certificate</h1>
+          <p style="text-align: center; color: #666; margin-bottom: 40px;">Enter your certificate number to verify its authenticity.</p>
+
+          <form style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onsubmit="verifyCertificate(event)">
+            <div class="form-group">
+              <label for="certnum" style="display: block; margin-bottom: 8px; font-weight: 500;">Certificate Number *</label>
+              <input type="text" id="certnum" name="certnum" placeholder="e.g., CERT-2026-00001" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Verify Certificate</button>
+          </form>
+
+          <div id="result" style="margin-top: 40px;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function verifyCertificate(event) {
+      event.preventDefault();
+      const certNum = document.getElementById('certnum').value;
+      const resultDiv = document.getElementById('result');
+      
+      // TODO: Call backend verification API
+      resultDiv.innerHTML = `
+        <div style="padding: 20px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+          <h4 style="margin-top: 0; color: #155724;">✓ Certificate Valid</h4>
+          <p><strong>Certificate Number:</strong> ${certNum}</p>
+          <p><strong>Learner:</strong> John Doe</p>
+          <p><strong>Programme:</strong> Type 1 Asbestos Work Training</p>
+          <p><strong>Issued:</strong> 22 May 2026</p>
+          <p><strong>Status:</strong> Active</p>
+        </div>
+      `;
+    }
+  </script>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <div class="brand-mark">
+            <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 3 L57 17.5 L57 46.5 L32 61 L7 46.5 L7 17.5 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"></path>
+              <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="20" y1="24" x2="44" y2="24"></line>
+                <line x1="16" y1="32" x2="48" y2="32"></line>
+                <line x1="20" y1="40" x2="44" y2="40"></line>
+              </g>
+              <circle cx="32" cy="50" r="2.5" fill="hsl(35 92% 50%)"></circle>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <div class="brand-title">OIZA-ASBESTOS</div>
+            <div class="brand-subtitle">Abatement Academy</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Facility</div>
+        <ul class="footer-links">
+          <li><a href="modules.html">12-Module Curriculum</a></li>
+          <li><a href="pricing.html">Course Fees</a></li>
+          <li><a href="enrol.html">Enrol a Learner</a></li>
+          <li><a href="verify.html">Verify Certificate</a></li>
+          <li><a href="facilitator.html">Facilitator Console</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 OIZA Holdings</span>
+        <span>OIZA-ASBESTOS Abatement Academy</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
